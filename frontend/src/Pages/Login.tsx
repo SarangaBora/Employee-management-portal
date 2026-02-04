@@ -6,6 +6,9 @@ const Login =() => {
     const [role, setRole] = useState<"employee"|"hr"|"admin">("employee");
     
     const options = ["Employee", "HR", "Admin"];
+
+    //function to take data of id,pass and send to backend to be implemented later
+
     
    
 
@@ -17,8 +20,8 @@ const Login =() => {
         <div className="auth-page">This is the login page
             <div className="sign-up-in">
                 <div className="sign-tabs">
-                    <button onClick={()=>(setSignMode("signin"))}>Sign In</button>
-                    <button onClick={()=>(setSignMode("signup"))}>Sign Up</button>
+                    <button onClick={()=>(setSignMode("signin"))} disabled={signMode==="signin"}>Sign In</button>
+                    <button onClick={()=>(setSignMode("signup"))} disabled={signMode==="signup"}>Sign Up</button>
                 </div>
                 <div className="sign-box">
 
@@ -44,7 +47,7 @@ const Login =() => {
                             <input type="text" placeholder="Enter your ID"/>
                             <label>Password:</label>
                             <input type="password" placeholder="Enter your password"/>
-                            <button type="submit">Sign In</button>
+                            <button type="submit" onSubmit={()=>{console.log("sign IN")}}>Sign In</button>
                         </form>
                     ) : (
                         <form className="sign-up-form">
@@ -55,7 +58,7 @@ const Login =() => {
                             <input type="text" placeholder="Enter your ID"/>
                             <label>Password:</label>
                             <input type="password" placeholder="Enter your password"/>
-                            <button type="submit">Sign Up</button>
+                            <button type="submit" onSubmit={()=>{console.log("sign UP data sent")}}>Sign Up</button>
                         </form>
                     )}      
 

@@ -1,11 +1,11 @@
 import Login from './Pages/Login'
-import Dashboard from './Pages/Dashboard'
-import AttendancePage from './Pages/AttendancePage'
-import EmployeeInfo from './Pages/EmployeeInfo'
+import Dashboard from './Pages/Employee_side/Dashboard'
+import AttendancePage from './Pages/Employee_side/AttendancePage'
+import EmployeeInfo from './Pages/Employee_side/EmployeeInfo'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'  
 import Layout from './Layout/Layout'
-import LeaveManagement from './Pages/Leave/LeaveManagement'
+import LeaveManagement from './Pages/Employee_side/Leave/LeaveManagement'
 
 
 function App() {

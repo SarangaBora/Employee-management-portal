@@ -1,5 +1,5 @@
 import "../../styles/Layout.css"
-
+import {Link} from 'react-router-dom'
 
 
 const NavBar=() => {
@@ -7,9 +7,7 @@ const NavBar=() => {
         <nav className="nav"> 
             <p>Company Portal</p>
             <p>Welcome User</p>
-            <p>Signin/SignOut</p>
-        
-        
+            <Link to="/login">Signin/SignOut</Link>
         </nav>
     )
 }
